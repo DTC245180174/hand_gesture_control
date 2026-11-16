@@ -1,0 +1,67 @@
+{
+  "model_class": "AirInkResCNN",
+  "num_classes": 9,
+  "best_epoch_loaded": 12,
+  "test_samples": 2520,
+  "accuracy_pct": 99.96,
+  "top2_accuracy_pct": 100.0,
+  "top3_accuracy_pct": 100.0,
+  "macro_f1_pct": 99.96,
+  "weighted_f1_pct": 99.96,
+  "single_sample_cpu_latency_ms": 1.481,
+  "top_confusions": [
+    {
+      "true_label": "freeform",
+      "pred_label": "star",
+      "count": 1,
+      "rate_of_true_pct": 0.36
+    }
+  ],
+  "per_class_f1_pct": {
+    "line": 100.0,
+    "circle": 100.0,
+    "rectangle": 100.0,
+    "triangle": 100.0,
+    "arrow": 100.0,
+    "checkmark": 100.0,
+    "cross": 100.0,
+    "star": 99.82,
+    "freeform": 99.82
+  },
+  "confidence_threshold_audit": [
+    {
+      "threshold": 0.0,
+      "coverage_pct": 100.0,
+      "accepted_precision_pct": 99.96,
+      "freeform_false_shape_pct": 0.36
+    },
+    {
+      "threshold": 0.7,
+      "coverage_pct": 99.96,
+      "accepted_precision_pct": 99.96,
+      "freeform_false_shape_pct": 0.36
+    },
+    {
+      "threshold": 0.72,
+      "coverage_pct": 99.96,
+      "accepted_precision_pct": 99.96,
+      "freeform_false_shape_pct": 0.36
+    },
+    {
+      "threshold": 0.85,
+      "coverage_pct": 99.92,
+      "accepted_precision_pct": 99.96,
+      "freeform_false_shape_pct": 0.36
+    },
+    {
+      "threshold": 0.9,
+      "coverage_pct": 99.76,
+      "accepted_precision_pct": 100.0,
+      "freeform_false_shape_pct": 0.0
+    }
+  ],
+  "webcam_holdout": {
+    "samples": 0,
+    "status": "Chưa có mẫu Webcam Holdout"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "cnn1d": {
+    "model_class": "TemporalCNN1D",
+    "trainable_parameters": 93000,
+    "model_size_kb": 363.28,
+    "input_shape": [
+      32,
+      30,
+      66
+    ],
+    "output_shape": [
+      32,
+      8
+    ],
+    "single_latency_ms": 0.46,
+    "batch32_latency_ms": 1.796,
+    "max_theoretical_fps": 2173.9
+  },
+  "bilstm": {
+    "model_class": "BiLSTMClassifier",
+    "trainable_parameters": 69984,
+    "model_size_kb": 273.38,
+    "input_shape": [
+      32,
+      30,
+      66
+    ],
+    "output_shape": [
+      32,
+      8
+    ],
+    "single_latency_ms": 0.571,
+    "batch32_latency_ms": 1.223,
+    "max_theoretical_fps": 1751.3
+  },
+  "hybrid": {
+    "model_class": "HybridConvBiGRUAttention",
+    "trainable_parameters": 91964,
+    "model_size_kb": 359.23,
+    "input_shape": [
+      32,
+      30,
+      66
+    ],
+    "output_shape": [
+      32,
+      8
+    ],
+    "single_latency_ms": 3.219,
+    "batch32_latency_ms": 7.058,
+    "max_theoretical_fps": 310.7,
+    "attention_weights_shape": [
+      32,
+      30
+    ]
+  },
+  "static_pose": {
+    "model_class": "StaticPoseNet",
+    "trainable_parameters": 60467,
+    "model_size_kb": 236.2,
+    "input_shape": [
+      32,
+      9,
+      21
+    ],
+    "output_shape": [
+      32,
+      3
+    ],
+    "single_latency_ms": 0.393,
+    "batch32_latency_ms": 0.787,
+    "max_theoretical_fps": 2544.5
+  },
+  "air_ink": {
+    "model_class": "AirInkResCNN",
+    "trainable_parameters": 497105,
+    "model_size_kb": 1941.82,
+    "input_shape": [
+      32,
+      1,
+      64,
+      64
+    ],
+    "output_shape": [
+      32,
+      9
+    ],
+    "single_latency_ms": 2.188,
+    "batch32_latency_ms": 20.673,
+    "max_theoretical_fps": 457.0
+  }
+}

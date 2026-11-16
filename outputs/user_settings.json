@@ -1,0 +1,14 @@
+{
+  "camera_idx": 0,
+  "pip_corner": "bottom_right",
+  "conf_threshold": 0.85,
+  "cooldown_sec": 2.0,
+  "pointer_smoothing": 0.6,
+  "pen_draw_click": true,
+  "point_1f_mode": "laser_ai",
+  "ppt_only_lock": true,
+  "bottom_deadzone": true,
+  "audio_beep": true,
+  "start_pip": true,
+  "start_paused": false
+}

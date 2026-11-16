@@ -1,0 +1,1497 @@
+{
+  "target_frames": 30,
+  "feature_dim": 66,
+  "max_missing_ratio_threshold": 0.25,
+  "video_splits": {
+    "train_videos": 125,
+    "val_videos": 24,
+    "test_videos": 52
+  },
+  "tensor_shapes": {
+    "train": {
+      "X": [
+        1671,
+        30,
+        66
+      ],
+      "y": [
+        1671
+      ]
+    },
+    "val": {
+      "X": [
+        212,
+        30,
+        66
+      ],
+      "y": [
+        212
+      ]
+    },
+    "test": {
+      "X": [
+        470,
+        30,
+        66
+      ],
+      "y": [
+        470
+      ]
+    }
+  },
+  "class_diagnostics": {
+    "idle": {
+      "raw_total": 542,
+      "dropped_high_missing": 0,
+      "interpolated_sequences": 25,
+      "clean_kept": 542,
+      "train_count": 375,
+      "val_count": 44,
+      "test_count": 97,
+      "webcam_raw": 175,
+      "webcam_clean": 175,
+      "webcam_rejected": 0,
+      "raw_len_min": 20,
+      "raw_len_max": 32,
+      "raw_len_avg": 29.9,
+      "mean_wrist_net_dx": 0.005,
+      "mean_wrist_net_dy": 0.016
+    },
+    "swipe_left": {
+      "raw_total": 233,
+      "dropped_high_missing": 42,
+      "interpolated_sequences": 13,
+      "clean_kept": 191,
+      "train_count": 134,
+      "val_count": 24,
+      "test_count": 52,
+      "webcam_raw": 36,
+      "webcam_clean": 27,
+      "webcam_rejected": 9,
+      "raw_len_min": 11,
+      "raw_len_max": 59,
+      "raw_len_avg": 30.1,
+      "mean_wrist_net_dx": 0.17,
+      "mean_wrist_net_dy": 0.003
+    },
+    "swipe_right": {
+      "raw_total": 225,
+      "dropped_high_missing": 41,
+      "interpolated_sequences": 4,
+      "clean_kept": 184,
+      "train_count": 125,
+      "val_count": 24,
+      "test_count": 52,
+      "webcam_raw": 30,
+      "webcam_clean": 25,
+      "webcam_rejected": 5,
+      "raw_len_min": 10,
+      "raw_len_max": 52,
+      "raw_len_avg": 29.8,
+      "mean_wrist_net_dx": -0.145,
+      "mean_wrist_net_dy": -0.043
+    },
+    "point_1f": {
+      "raw_total": 408,
+      "dropped_high_missing": 25,
+      "interpolated_sequences": 0,
+      "clean_kept": 359,
+      "train_count": 274,
+      "val_count": 24,
+      "test_count": 52,
+      "webcam_raw": 60,
+      "webcam_clean": 60,
+      "webcam_rejected": 0,
+      "raw_len_min": 20,
+      "raw_len_max": 32,
+      "raw_len_avg": 31.5,
+      "mean_wrist_net_dx": -0.007,
+      "mean_wrist_net_dy": -0.004
+    },
+    "point_2f": {
+      "raw_total": 393,
+      "dropped_high_missing": 25,
+      "interpolated_sequences": 1,
+      "clean_kept": 344,
+      "train_count": 261,
+      "val_count": 24,
+      "test_count": 52,
+      "webcam_raw": 45,
+      "webcam_clean": 45,
+      "webcam_rejected": 0,
+      "raw_len_min": 21,
+      "raw_len_max": 32,
+      "raw_len_avg": 31.6,
+      "mean_wrist_net_dx": -0.003,
+      "mean_wrist_net_dy": 0.022
+    },
+    "zoom_in": {
+      "raw_total": 272,
+      "dropped_high_missing": 11,
+      "interpolated_sequences": 0,
+      "clean_kept": 258,
+      "train_count": 169,
+      "val_count": 24,
+      "test_count": 60,
+      "webcam_raw": 40,
+      "webcam_clean": 32,
+      "webcam_rejected": 8,
+      "raw_len_min": 11,
+      "raw_len_max": 92,
+      "raw_len_avg": 35.4,
+      "mean_wrist_net_dx": -0.018,
+      "mean_wrist_net_dy": -0.02
+    },
+    "zoom_out": {
+      "raw_total": 258,
+      "dropped_high_missing": 3,
+      "interpolated_sequences": 1,
+      "clean_kept": 252,
+      "train_count": 167,
+      "val_count": 24,
+      "test_count": 54,
+      "webcam_raw": 50,
+      "webcam_clean": 48,
+      "webcam_rejected": 2,
+      "raw_len_min": 13,
+      "raw_len_max": 83,
+      "raw_len_avg": 34.0,
+      "mean_wrist_net_dx": 0.013,
+      "mean_wrist_net_dy": 0.015
+    },
+    "click": {
+      "raw_total": 250,
+      "dropped_high_missing": 1,
+      "interpolated_sequences": 0,
+      "clean_kept": 249,
+      "train_count": 166,
+      "val_count": 24,
+      "test_count": 51,
+      "webcam_raw": 56,
+      "webcam_clean": 56,
+      "webcam_rejected": 0,
+      "raw_len_min": 21,
+      "raw_len_max": 121,
+      "raw_len_avg": 47.3,
+      "mean_wrist_net_dx": -0.004,
+      "mean_wrist_net_dy": -0.016
+    }
+  },
+  "webcam_audit_logs": [
+    {
+      "file": "swipe_left/webcam_swipe_left_1793890160333.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987419358.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987436046.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987441319.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987462751.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987475169.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 9/30 frames (30.0% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987481360.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987487709.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987490572.npy",
+      "class": "swipe_left",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987506141.npy",
+      "class": "swipe_right",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 8/30 frames (26.7% > 25%)"
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987514142.npy",
+      "class": "swipe_right",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 9/30 frames (30.0% > 25%)"
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987539328.npy",
+      "class": "swipe_right",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 10/30 frames (33.3% > 25%)"
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987546990.npy",
+      "class": "swipe_right",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 9/30 frames (30.0% > 25%)"
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987564140.npy",
+      "class": "swipe_right",
+      "status": "LOẠI (MISSING)",
+      "reason": "Mất dấu bàn tay 10/30 frames (33.3% > 25%)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793890397261.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.02 -> 1.08, delta=+0.07 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793890414902.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 0.87 -> 0.98, delta=+0.11 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987787898.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.13 -> 1.16, delta=+0.03 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987803956.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.04 -> 1.10, delta=+0.06 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987810580.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.08 -> 0.99, delta=-0.09 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987813654.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 0.99 -> 0.95, delta=-0.04 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987819749.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.12 -> 1.08, delta=-0.04 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987823000.npy",
+      "class": "zoom_in",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ bung ngón quá nhỏ (ap: 1.10 -> 1.10, delta=+0.00 < +0.14)"
+    },
+    {
+      "file": "zoom_out/webcam_zoom_out_1793987858294.npy",
+      "class": "zoom_out",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ khép ngón quá nhỏ (ap: 0.09 -> 0.08, delta=-0.00 > -0.14)"
+    },
+    {
+      "file": "zoom_out/webcam_zoom_out_1793987867675.npy",
+      "class": "zoom_out",
+      "status": "LOẠI (LỖI THAO TÁC)",
+      "reason": "Độ khép ngón quá nhỏ (ap: 0.27 -> 0.19, delta=-0.08 > -0.14)"
+    }
+  ],
+  "dropped_sequences": [
+    {
+      "file": "swipe_right/1CM1_4_R_#229_TRT_f002404_002433.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.053)"
+    },
+    {
+      "file": "swipe_right/1CM1_4_R_#230_TRT_f003275_003306.npy",
+      "class": "swipe_right",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.079)"
+    },
+    {
+      "file": "point_2f/1CM1_4_R_#232_P2F_f000749_000780.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.355)"
+    },
+    {
+      "file": "swipe_left/1CM42_11_R_#206_TLT_f001142_001157.npy",
+      "class": "swipe_left",
+      "num_frames": 16,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.065)"
+    },
+    {
+      "file": "swipe_left/1CM42_11_R_#207_TLT_f000037_000062.npy",
+      "class": "swipe_left",
+      "num_frames": 26,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.062)"
+    },
+    {
+      "file": "swipe_right/1CM42_11_R_#207_TRT_f002095_002126.npy",
+      "class": "swipe_right",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.069)"
+    },
+    {
+      "file": "swipe_left/1CM42_11_R_#208_TLT_f003647_003664.npy",
+      "class": "swipe_left",
+      "num_frames": 18,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (-0.011)"
+    },
+    {
+      "file": "point_2f/1CM42_12_R_#157_P2F_f000163_000194.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.520)"
+    },
+    {
+      "file": "swipe_right/1CM42_12_R_#157_TRT_f000606_000649.npy",
+      "class": "swipe_right",
+      "num_frames": 44,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.024)"
+    },
+    {
+      "file": "swipe_left/1CM42_12_R_#157_TLT_f002770_002811.npy",
+      "class": "swipe_left",
+      "num_frames": 42,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.006)"
+    },
+    {
+      "file": "point_2f/1CM42_12_R_#158_P2F_f000201_000232.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.621)"
+    },
+    {
+      "file": "swipe_left/1CM42_12_R_#158_TLT_f003630_003676.npy",
+      "class": "swipe_left",
+      "num_frames": 47,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.019)"
+    },
+    {
+      "file": "swipe_right/1CM42_12_R_#158_TRT_f003983_004027.npy",
+      "class": "swipe_right",
+      "num_frames": 45,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.021)"
+    },
+    {
+      "file": "point_1f/1CM42_12_R_#159_P1F_f000187_000218.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.598)"
+    },
+    {
+      "file": "point_1f/1CM42_12_R_#159_P1F_f000239_000270.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.448)"
+    },
+    {
+      "file": "swipe_left/1CM42_12_R_#159_TLT_f000349_000391.npy",
+      "class": "swipe_left",
+      "num_frames": 43,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.002)"
+    },
+    {
+      "file": "swipe_right/1CM42_12_R_#159_TRT_f002058_002099.npy",
+      "class": "swipe_right",
+      "num_frames": 42,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.021)"
+    },
+    {
+      "file": "point_2f/1CM42_12_R_#160_P2F_f000184_000215.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.566)"
+    },
+    {
+      "file": "point_2f/1CM42_12_R_#160_P2F_f000237_000268.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.368)"
+    },
+    {
+      "file": "swipe_left/1CM42_12_R_#160_TLT_f000349_000392.npy",
+      "class": "swipe_left",
+      "num_frames": 44,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.011)"
+    },
+    {
+      "file": "point_1f/1CM42_12_R_#160_P1F_f001145_001176.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.555)"
+    },
+    {
+      "file": "point_1f/1CM42_12_R_#160_P1F_f001200_001231.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.424)"
+    },
+    {
+      "file": "swipe_right/1CM42_12_R_#160_TRT_f003942_003981.npy",
+      "class": "swipe_right",
+      "num_frames": 40,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.016)"
+    },
+    {
+      "file": "swipe_right/1CM42_13_R_#141_TRT_f002635_002675.npy",
+      "class": "swipe_right",
+      "num_frames": 41,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.017)"
+    },
+    {
+      "file": "swipe_left/1CM42_13_R_#141_TLT_f003581_003624.npy",
+      "class": "swipe_left",
+      "num_frames": 44,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (-0.007)"
+    },
+    {
+      "file": "swipe_right/1CM42_13_R_#142_TRT_f000893_000933.npy",
+      "class": "swipe_right",
+      "num_frames": 41,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.001)"
+    },
+    {
+      "file": "swipe_left/1CM42_13_R_#142_TLT_f001207_001227.npy",
+      "class": "swipe_left",
+      "num_frames": 21,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.013)"
+    },
+    {
+      "file": "point_2f/1CM42_13_R_#143_P2F_f000814_000845.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.394)"
+    },
+    {
+      "file": "swipe_left/1CM42_13_R_#143_TLT_f002666_002693.npy",
+      "class": "swipe_left",
+      "num_frames": 28,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.014)"
+    },
+    {
+      "file": "point_2f/1CM42_13_R_#144_P2F_f000209_000240.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.417)"
+    },
+    {
+      "file": "swipe_left/1CM42_13_R_#144_TLT_f000716_000743.npy",
+      "class": "swipe_left",
+      "num_frames": 28,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.017)"
+    },
+    {
+      "file": "swipe_right/1CM42_13_R_#144_TRT_f001009_001043.npy",
+      "class": "swipe_right",
+      "num_frames": 35,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.011)"
+    },
+    {
+      "file": "swipe_right/1CM42_21_R_#154_TRT_f000394_000432.npy",
+      "class": "swipe_right",
+      "num_frames": 39,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.028)"
+    },
+    {
+      "file": "swipe_left/1CM42_21_R_#154_TLT_f000722_000765.npy",
+      "class": "swipe_left",
+      "num_frames": 44,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.076)"
+    },
+    {
+      "file": "point_2f/1CM42_26_R_#173_P2F_f000191_000222.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.389)"
+    },
+    {
+      "file": "swipe_left/1CM42_32_R_#169_TLT_f000341_000360.npy",
+      "class": "swipe_left",
+      "num_frames": 20,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.047)"
+    },
+    {
+      "file": "swipe_left/1CM42_32_R_#170_TLT_f001794_001815.npy",
+      "class": "swipe_left",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.072)"
+    },
+    {
+      "file": "swipe_right/1CM42_32_R_#170_TRT_f003426_003456.npy",
+      "class": "swipe_right",
+      "num_frames": 31,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.010)"
+    },
+    {
+      "file": "swipe_left/1CM42_32_R_#171_TLT_f002976_002999.npy",
+      "class": "swipe_left",
+      "num_frames": 24,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.046)"
+    },
+    {
+      "file": "point_1f/1CM42_32_R_#172_P1F_f000155_000186.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.392)"
+    },
+    {
+      "file": "point_1f/1CM42_32_R_#172_P1F_f000242_000273.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.386)"
+    },
+    {
+      "file": "swipe_right/1CM42_32_R_#172_TRT_f003004_003022.npy",
+      "class": "swipe_right",
+      "num_frames": 19,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.026)"
+    },
+    {
+      "file": "swipe_left/1CM42_32_R_#172_TLT_f003938_003968.npy",
+      "class": "swipe_left",
+      "num_frames": 31,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (-0.010)"
+    },
+    {
+      "file": "point_1f/1CM42_3_R_#193_P1F_f000553_000584.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.399)"
+    },
+    {
+      "file": "swipe_right/1CM42_3_R_#193_TRT_f001594_001641.npy",
+      "class": "swipe_right",
+      "num_frames": 48,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.043)"
+    },
+    {
+      "file": "swipe_right/1CM42_3_R_#194_TRT_f000033_000054.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.040)"
+    },
+    {
+      "file": "point_2f/1CM42_4_R_#185_P2F_f000118_000149.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.474)"
+    },
+    {
+      "file": "swipe_right/1CM42_4_R_#185_TRT_f000603_000635.npy",
+      "class": "swipe_right",
+      "num_frames": 33,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.074)"
+    },
+    {
+      "file": "point_2f/1CM42_4_R_#187_P2F_f000131_000162.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.423)"
+    },
+    {
+      "file": "point_2f/1CM42_4_R_#187_P2F_f000204_000235.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.414)"
+    },
+    {
+      "file": "point_1f/1CM42_4_R_#187_P1F_f000449_000480.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.352)"
+    },
+    {
+      "file": "swipe_left/1CM42_4_R_#188_TLT_f002524_002546.npy",
+      "class": "swipe_left",
+      "num_frames": 23,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.021)"
+    },
+    {
+      "file": "swipe_right/1CM42_6_R_#162_TRT_f000422_000449.npy",
+      "class": "swipe_right",
+      "num_frames": 28,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.037)"
+    },
+    {
+      "file": "point_1f/1CM42_7_L_#203_P1F_f000575_000606.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.354)"
+    },
+    {
+      "file": "swipe_left/1CM42_9_R_#165_TLT_f003380_003407.npy",
+      "class": "swipe_left",
+      "num_frames": 28,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.065)"
+    },
+    {
+      "file": "swipe_left/1CM42_9_R_#166_TLT_f000657_000688.npy",
+      "class": "swipe_left",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.037)"
+    },
+    {
+      "file": "swipe_right/1CM42_9_R_#166_TRT_f002969_002990.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.020)"
+    },
+    {
+      "file": "swipe_right/1CM42_9_R_#167_TRT_f002118_002139.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.029)"
+    },
+    {
+      "file": "zoom_in/1CM42_9_R_#167_ZIN_f002405_002435.npy",
+      "class": "zoom_in",
+      "num_frames": 31,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN zoom_in không bung ngón (+0.03)"
+    },
+    {
+      "file": "swipe_right/1CM42_9_R_#168_TRT_f000049_000065.npy",
+      "class": "swipe_right",
+      "num_frames": 17,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.077)"
+    },
+    {
+      "file": "point_2f/1CV12_13_R_#94_P2F_f000350_000381.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.425)"
+    },
+    {
+      "file": "swipe_right/1CV12_13_R_#94_TRT_f004205_004229.npy",
+      "class": "swipe_right",
+      "num_frames": 25,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.017)"
+    },
+    {
+      "file": "point_1f/1CV12_13_R_#95_P1F_f000258_000289.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.498)"
+    },
+    {
+      "file": "point_2f/1CV12_13_R_#95_P2F_f000461_000492.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.448)"
+    },
+    {
+      "file": "swipe_right/1CV12_13_R_#95_TRT_f000687_000715.npy",
+      "class": "swipe_right",
+      "num_frames": 29,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.036)"
+    },
+    {
+      "file": "point_1f/1CV12_13_R_#96_P1F_f000237_000268.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.376)"
+    },
+    {
+      "file": "point_2f/1CV12_13_R_#96_P2F_f000573_000604.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.370)"
+    },
+    {
+      "file": "point_2f/1CV12_1_R_#65_P2F_f000266_000297.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.373)"
+    },
+    {
+      "file": "swipe_right/1CV12_1_R_#67_TRT_f001618_001645.npy",
+      "class": "swipe_right",
+      "num_frames": 28,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.071)"
+    },
+    {
+      "file": "swipe_right/1CV12_1_R_#68_TRT_f001775_001796.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.017)"
+    },
+    {
+      "file": "swipe_left/1CV12_22_R_#113_TLT_f002497_002533.npy",
+      "class": "swipe_left",
+      "num_frames": 37,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.051)"
+    },
+    {
+      "file": "swipe_left/1CV12_22_R_#115_TLT_f003817_003849.npy",
+      "class": "swipe_left",
+      "num_frames": 33,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.070)"
+    },
+    {
+      "file": "swipe_left/1CV12_22_R_#116_TLT_f000290_000326.npy",
+      "class": "swipe_left",
+      "num_frames": 37,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.078)"
+    },
+    {
+      "file": "point_1f/1CV12_8_R_#85_P1F_f001642_001673.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.378)"
+    },
+    {
+      "file": "point_1f/1CV12_8_R_#88_P1F_f000202_000233.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.393)"
+    },
+    {
+      "file": "point_2f/1CV12_8_R_#88_P2F_f000442_000473.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.390)"
+    },
+    {
+      "file": "swipe_right/1CV12_8_R_#88_TRT_f001239_001257.npy",
+      "class": "swipe_right",
+      "num_frames": 19,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.047)"
+    },
+    {
+      "file": "point_1f/4CM11_11_R_#2_P1F_f000656_000687.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.402)"
+    },
+    {
+      "file": "swipe_left/4CM11_14_R_#21_TLT_f000538_000568.npy",
+      "class": "swipe_left",
+      "num_frames": 31,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.071)"
+    },
+    {
+      "file": "swipe_right/4CM11_14_R_#22_TRT_f000436_000464.npy",
+      "class": "swipe_right",
+      "num_frames": 29,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.072)"
+    },
+    {
+      "file": "swipe_left/4CM11_14_R_#23_TLT_f002268_002301.npy",
+      "class": "swipe_left",
+      "num_frames": 34,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.042)"
+    },
+    {
+      "file": "swipe_left/4CM11_14_R_#24_TLT_f001351_001383.npy",
+      "class": "swipe_left",
+      "num_frames": 33,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.076)"
+    },
+    {
+      "file": "swipe_right/4CM11_17_R_#15_TRT_f004103_004137.npy",
+      "class": "swipe_right",
+      "num_frames": 35,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.052)"
+    },
+    {
+      "file": "point_1f/4CM11_17_R_#16_P1F_f000190_000221.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.380)"
+    },
+    {
+      "file": "swipe_right/4CM11_17_R_#16_TRT_f002914_002929.npy",
+      "class": "swipe_right",
+      "num_frames": 16,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.003)"
+    },
+    {
+      "file": "swipe_left/4CM11_19_R_#17_TLT_f002247_002290.npy",
+      "class": "swipe_left",
+      "num_frames": 44,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.006)"
+    },
+    {
+      "file": "point_2f/4CM11_1_R_#14_P2F_f000271_000302.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.361)"
+    },
+    {
+      "file": "swipe_right/4CM11_1_R_#14_TRT_f003002_003034.npy",
+      "class": "swipe_right",
+      "num_frames": 33,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.049)"
+    },
+    {
+      "file": "swipe_right/4CM11_1_R_#16_TRT_f002413_002448.npy",
+      "class": "swipe_right",
+      "num_frames": 36,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.060)"
+    },
+    {
+      "file": "swipe_left/4CM11_23_R_#25_TLT_f002423_002454.npy",
+      "class": "swipe_left",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.060)"
+    },
+    {
+      "file": "swipe_right/4CM11_23_R_#26_TRT_f002743_002761.npy",
+      "class": "swipe_right",
+      "num_frames": 19,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.067)"
+    },
+    {
+      "file": "swipe_left/4CM11_23_R_#26_TLT_f003021_003037.npy",
+      "class": "swipe_left",
+      "num_frames": 17,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.028)"
+    },
+    {
+      "file": "swipe_right/4CM11_23_R_#27_TRT_f002888_002917.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.071)"
+    },
+    {
+      "file": "swipe_left/4CM11_23_R_#27_TLT_f003145_003184.npy",
+      "class": "swipe_left",
+      "num_frames": 40,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.001)"
+    },
+    {
+      "file": "swipe_left/4CM11_23_R_#28_TLT_f002941_002978.npy",
+      "class": "swipe_left",
+      "num_frames": 38,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.034)"
+    },
+    {
+      "file": "point_1f/4CM11_26_R_#5_P1F_f000168_000199.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.430)"
+    },
+    {
+      "file": "point_2f/4CM11_26_R_#5_P2F_f000448_000479.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.447)"
+    },
+    {
+      "file": "point_2f/4CM11_26_R_#6_P2F_f000191_000222.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.454)"
+    },
+    {
+      "file": "point_1f/4CM11_26_R_#6_P1F_f000514_000545.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.422)"
+    },
+    {
+      "file": "point_2f/4CM11_26_R_#7_P2F_f000780_000811.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.411)"
+    },
+    {
+      "file": "point_2f/4CM11_26_R_#8_P2F_f000211_000242.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.542)"
+    },
+    {
+      "file": "point_1f/4CM11_26_R_#8_P1F_f000521_000552.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.407)"
+    },
+    {
+      "file": "zoom_out/4CM11_29_R_#58_ZOT_f003508_003522.npy",
+      "class": "zoom_out",
+      "num_frames": 15,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN zoom_out không khép ngón (+0.02)"
+    },
+    {
+      "file": "point_1f/4CM11_29_R_#60_P1F_f000129_000160.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.355)"
+    },
+    {
+      "file": "zoom_in/4CM11_29_R_#60_ZIN_f002609_002630.npy",
+      "class": "zoom_in",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN zoom_in không bung ngón (-0.45)"
+    },
+    {
+      "file": "swipe_right/4CM11_29_R_#60_TRT_f002631_002667.npy",
+      "class": "swipe_right",
+      "num_frames": 37,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.071)"
+    },
+    {
+      "file": "point_1f/4CM11_2_R_#37_P1F_f000199_000230.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.423)"
+    },
+    {
+      "file": "click/4CM11_2_R_#37_OP2_f000422_000479.npy",
+      "class": "click",
+      "num_frames": 58,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN click dịch ngang quá lớn dễ nhầm swipe (-0.303)"
+    },
+    {
+      "file": "swipe_left/4CM11_2_R_#37_TLT_f001088_001107.npy",
+      "class": "swipe_left",
+      "num_frames": 20,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (-0.030)"
+    },
+    {
+      "file": "swipe_right/4CM11_2_R_#37_TRT_f002861_002882.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.041)"
+    },
+    {
+      "file": "point_1f/4CM11_2_R_#38_P1F_f000547_000578.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.394)"
+    },
+    {
+      "file": "swipe_left/4CM11_2_R_#38_TLT_f002186_002235.npy",
+      "class": "swipe_left",
+      "num_frames": 50,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.077)"
+    },
+    {
+      "file": "point_2f/4CM11_2_R_#39_P2F_f000231_000262.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (+0.392)"
+    },
+    {
+      "file": "point_1f/4CM11_2_R_#40_P1F_f000218_000249.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (+0.481)"
+    },
+    {
+      "file": "point_2f/4CM11_2_R_#40_P2F_f001862_001893.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.381)"
+    },
+    {
+      "file": "swipe_right/4CM11_5_L_#10_TRT_f002998_003037.npy",
+      "class": "swipe_right",
+      "num_frames": 40,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (+0.029)"
+    },
+    {
+      "file": "swipe_left/4CM11_5_L_#11_TLT_f001592_001629.npy",
+      "class": "swipe_left",
+      "num_frames": 38,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_left biên độ yếu/ngược (+0.071)"
+    },
+    {
+      "file": "zoom_in/4CM11_5_L_#11_ZIN_f003100_003130.npy",
+      "class": "zoom_in",
+      "num_frames": 31,
+      "missing_frames": 22,
+      "missing_ratio": 0.7097
+    },
+    {
+      "file": "swipe_right/4CM11_5_L_#9_TRT_f002552_002573.npy",
+      "class": "swipe_right",
+      "num_frames": 22,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN swipe_right biên độ yếu/ngược (-0.065)"
+    },
+    {
+      "file": "point_1f/4CM11_7_R_#33_P1F_f000133_000164.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.383)"
+    },
+    {
+      "file": "point_2f/4CM11_7_R_#33_P2F_f000425_000456.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.384)"
+    },
+    {
+      "file": "point_2f/4CM11_7_R_#34_P2F_f000212_000243.npy",
+      "class": "point_2f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_2f dịch ngang quá lớn dễ nhầm swipe (-0.412)"
+    },
+    {
+      "file": "point_1f/4CM11_7_R_#34_P1F_f001498_001529.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.360)"
+    },
+    {
+      "file": "point_1f/4CM11_7_R_#35_P1F_f000869_000900.npy",
+      "class": "point_1f",
+      "num_frames": 32,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "IPN point_1f dịch ngang quá lớn dễ nhầm swipe (-0.492)"
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793890160333.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987419358.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987436046.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987441319.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987462751.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987475169.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 9,
+      "missing_ratio": 0.3
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987481360.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987487709.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_left/webcam_swipe_left_1793987490572.npy",
+      "class": "swipe_left",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987506141.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 8,
+      "missing_ratio": 0.2667
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987514142.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 9,
+      "missing_ratio": 0.3
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987539328.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 10,
+      "missing_ratio": 0.3333
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987546990.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 9,
+      "missing_ratio": 0.3
+    },
+    {
+      "file": "swipe_right/webcam_swipe_right_1793987564140.npy",
+      "class": "swipe_right",
+      "num_frames": 30,
+      "missing_frames": 10,
+      "missing_ratio": 0.3333
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793890397261.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.02 -> 1.08, delta=+0.07 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793890414902.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 0.87 -> 0.98, delta=+0.11 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987787898.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.13 -> 1.16, delta=+0.03 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987803956.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.04 -> 1.10, delta=+0.06 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987810580.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.08 -> 0.99, delta=-0.09 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987813654.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 0.99 -> 0.95, delta=-0.04 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987819749.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.12 -> 1.08, delta=-0.04 < +0.14)"
+    },
+    {
+      "file": "zoom_in/webcam_zoom_in_1793987823000.npy",
+      "class": "zoom_in",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ bung ngón quá nhỏ (ap: 1.10 -> 1.10, delta=+0.00 < +0.14)"
+    },
+    {
+      "file": "zoom_out/webcam_zoom_out_1793987858294.npy",
+      "class": "zoom_out",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ khép ngón quá nhỏ (ap: 0.09 -> 0.08, delta=-0.00 > -0.14)"
+    },
+    {
+      "file": "zoom_out/webcam_zoom_out_1793987867675.npy",
+      "class": "zoom_out",
+      "num_frames": 30,
+      "missing_frames": 0,
+      "missing_ratio": 0.0,
+      "kinematic_reject_reason": "Độ khép ngón quá nhỏ (ap: 0.27 -> 0.19, delta=-0.08 > -0.14)"
+    }
+  ]
+}

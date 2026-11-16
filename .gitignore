@@ -1,0 +1,41 @@
+# ==============================================================================
+# Dữ liệu & Tài liệu báo cáo (không đưa lên Git)
+# ==============================================================================
+data/
+/data/
+
+# Chỉ giữ duy nhất tệp README.md ở thư mục gốc; bỏ qua mọi tệp .md khác
+*.md
+*.MD
+!/README.md
+
+# Bỏ qua các tệp Word, PowerPoint và tệp tạm của MS Office
+*.docx
+*.doc
+*.pptx
+*.ppt
+~$*
+
+# Bỏ qua thư mục cấu hình agent nội bộ
+.agents/
+
+# ==============================================================================
+# Tệp build, cache Python & môi trường phát triển
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+*.spec
+.venv/
+venv/
+env/
+.env
+.vscode/
+.idea/
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
